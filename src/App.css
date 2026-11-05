@@ -1,38 +1,134 @@
-.App {
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background-color: #f4f6f8;
+}
+
+.app-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.navbar {
+  display: flex;
+  gap: 20px;
+  padding: 10px 0;
+  border-bottom: 2px solid #ddd;
+  margin-bottom: 20px;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+}
+
+.navbar a.active {
+  color: #007bff;
+}
+
+.answers-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.answer-btn {
+  padding: 15px;
+  font-size: 16px;
+  cursor: pointer;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background: #fff;
+  text-align: left;
+}
+
+.answer-btn.selected {
+  background-color: #ffc107 !important;
+  color: #000;
+}
+
+.answer-btn.correct {
+  background-color: #28a745 !important;
+  color: #fff;
+}
+
+.answer-btn.wrong {
+  background-color: #dc3545 !important;
+  color: #fff;
+}
+
+.hidden-placeholder {
+  visibility: hidden;
+}
+
+.progress-bar {
+  display: flex;
+  gap: 5px;
+  margin: 15px 0;
+}
+
+.progress-box {
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #ccc;
+  background: #e9ecef;
+  font-size: 12px;
+}
+
+.progress-box.active {
+  border: 2px solid #000;
+  font-weight: bold;
+}
+
+.progress-box.correct {
+  background-color: #28a745;
+  color: #fff;
+}
+
+.progress-box.wrong {
+  background-color: #dc3545;
+  color: #fff;
+}
+
+.progress-box.skipped {
+  background-color: #fd7e14;
+  color: #fff;
+}
+
+.text-red {
+  color: red;
+  font-weight: bold;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 15px;
+}
+
+th, td {
+  border: 1px solid #ddd;
+  padding: 8px;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+th {
+  background-color: #f2f2f2;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.helpers-container {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  gap: 10px;
+  margin: 15px 0;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.helpers-container button {
+  padding: 8px 15px;
+  cursor: pointer;
 }
